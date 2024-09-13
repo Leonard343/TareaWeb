@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería San José - Catálogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ff9800;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #ffbe56;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 8px;
+        }
+        header img {
+            left: 100px;
+            height: 60px;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #333;
+        }
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        .producto {
+            background-color: #fff3e0;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .producto img {
+            width: 100px;
+            height: 100px;
+        }
+        .producto h3 {
+            margin: 10px 0 5px;
+            font-size: 18px;
+        }
+        .producto p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .producto button {
+            background-color: #ffcc00;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .producto button:hover {
+            background-color: #ffb300;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Ferretería San José">
+    </header>
+
+    <h1>Catálogo</h1>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar...">
+    </div>
+
+    <div class="catalogo">
+        <div class="producto">
+            <img src="cutter.png" alt="Cutter">
+            <h3>Cutter 6mm</h3>
+            <p>$10</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="desarmador.png" alt="Desarmador plano">
+            <h3>Desarmador plano</h3>
+            <p>$7</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="espátula.png" alt="Espátula pintor">
+            <h3>Espátula pintor</h3>
+            <p>$20</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="raspador.png" alt="Raspador de vidrios">
+            <h3>Raspador de vidrios</h3>
+            <p>$15</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="tijeras.png" alt="Tijeras acero inoxidable">
+            <h3>Tijeras acero inoxidable</h3>
+            <p>$25</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="llave.png" alt="Llave inglesa">
+            <h3>Llave inglesa</h3>
+            <p>$20</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="martillo.png" alt="Martillo">
+            <h3>Martillo</h3>
+            <p>$30</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="taladro.png" alt="Taladro">
+            <h3>Taladro</h3>
+            <p>$65</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+
+</body>
+</html>

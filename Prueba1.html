@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Administrador - Catálogo</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cccccc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #777777;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        header img {
+            float: left;
+            height: 60px;
+            margin-left: 20px;
+        }
+        h1 {
+            color: #fff;
+        }
+        .catalogo-container {
+            width: 80%;
+            background-color: #555555;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            float: right;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        td {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo">
+        <h1>Vista de administrador - Catálogo</h1>
+    </header>
+
+        <table id="catalogoProductos" class="display">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del producto</th>
+                    <th>Inventario</th>
+                    <th>Última actualización de inventario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Cutter 6mm</td>
+                    <td>100</td>
+                    <td>15/09/2024</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Desarmador plano</td>
+                    <td>200</td>
+                    <td>16/09/2024</td>
+                </tr>
+                <!-- Agrega más productos aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script para inicializar DataTables -->
+    <script>
+        $(document).ready(function() {
+            // Inicializar DataTable con las opciones
+            $('#catalogoProductos').DataTable({
+                "paging": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "pageLength": 10 // Muestra 10 productos por página
+            });
+
+            // Conectar el buscador personalizado al DataTable
+            $('#buscar').on('keyup', function () {
+                $('#catalogoProductos').DataTable().search($(this).val()).draw();
+            });
+        });
+    </script>
+
+</body>
+</html>

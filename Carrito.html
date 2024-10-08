@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f79b48; /* Color de fondo similar al del boceto */
+            color: #000;
+        }
+        .carrito {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f3a552;
+            text-align: center;
+        }
+        h1 {
+            background-color: #f3a552;
+            padding: 10px;
+            font-size: 2em;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 2px solid #000;
+        }
+        th {
+            background-color: #ff963b;
+            color: #000;
+            padding: 10px;
+        }
+        td {
+            background-color: #ffd98e;
+            padding: 10px;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 50px;
+            padding: 5px;
+            font-size: 1em;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ffbc45;
+            border: 2px solid #000;
+            color: #000;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        button:hover {
+            background-color: #e59b3d;
+        }
+        .delete {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .delete:hover {
+            color: red;
+        }
+        .btn-group {
+            margin-top: 20px;
+        }
+        .btn-group button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carrito">
+        <h1>Carrito de compras</h1>
+        <table id="tablaCarrito">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>ID</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Eliminar producto</th> <!-- Nueva columna añadida -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Martillo</td>
+                    <td>1623</td>
+                    <td><input type="number" id="cantidad1" value="1" min="1"></td>
+                    <td id="total1">$50</td>
+                    <td><button class="delete">🗑️</button></td>
+                </tr>
+                <tr>
+                    <td>Rastrillo para pasto</td>
+                    <td>1621</td>
+                    <td><input type="number" id="cantidad2" value="4" min="1"></td>
+                    <td id="total2">$280</td>
+                    <td><button class="delete">🗑️</button></td>
+                </tr>
+                <tr>
+                    <td>Taladro</td>
+                    <td>1673</td>
+                    <td><input type="number" id="cantidad3" value="2" min="1"></td>
+                    <td id="total3">$280</td>
+                    <td><button class="delete">🗑️</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-group">
+            <button onclick="volver()">Volver a la tienda</button>
+            <button onclick="comprar()">Comprar productos</button>
+        </div>
+    </div>
+    <script src="CarritoJs.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferretería San José - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styleLg.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-section">
+            <h2>Iniciar sesión</h2>
+            <form id="loginForm">
+                <label for="username">Nombre de usuario</label>
+                <input type="text" id="username" name="username" placeholder="Escriba su nombre de usuario" required>
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="Escriba su contraseña" required>
+                <button type="submit">Comenzar</button>
+            </form>
+            <p>No te has creado una cuenta aún?<br>
+                Dale click al botón de abajo para crear una nueva
+            </p>
+            <button id="createAccount">Crear nueva cuenta</button>
+        </div>
+        <div class="image-section">
+            <img src="logo.png" alt="Logo Ferretería San José" class="logo">
+            <img src="tools.jpg" alt="Imagen de herramientas" class="tools-image">
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
